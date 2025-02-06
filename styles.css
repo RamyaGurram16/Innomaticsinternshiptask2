@@ -1,0 +1,320 @@
+/* Basic Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure it fits within the viewport */
+  height: 100px;
+  background-color: brown;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left .logo {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.navbar-left .brand {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform:capitalize;
+  font-style:italic;
+}
+
+.navbar-right a {
+  color: bisque;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 30px;
+  padding-right:30px;
+  transition: color 0.3s;
+}
+
+.navbar-right a:hover {
+  color: darkblue;
+}
+
+/* Hero Section Styling */
+.hero {
+  background: url('/images/coffee.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  min-height: 90vh;
+  padding: 120px 20px; /* Add more top padding to avoid overlap with navbar */
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top:100px;
+  text-align:center;
+  color:beige;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+/* Menu */
+.menu {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.menu h1 {
+  font-size: 55px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu h1 span {
+  color: peru;
+  font-family: mv boli;
+  font-size: 70px;
+}
+
+.menu .menu_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding: 30px;
+}
+
+.menu .menu_box .menu_card {
+  width: 90%;
+  height: 480px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.menu .menu_box .menu_card .menu_image {
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img {
+  transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card {
+  position: absolute;
+  top: -240px;
+  right: -8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card {
+  top: -240px;
+  right: 20px;
+  opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 50px;
+  color: #000;
+  cursor: pointer;
+  text-shadow: 0 0 6px #000;
+}
+
+.menu .menu_box .menu_card .small_card i:hover {
+  color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info h2 {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 25px;
+  color: chocolate;
+}
+
+.menu .menu_box .menu_card .menu_info p {
+  text-align: center;
+  margin-top: 8px;
+  line-height: 21px;
+}
+
+.menu .menu_box .menu_card .menu_info h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* About Section */
+.about {
+  width: 100%;
+  padding: 60px 0;
+  padding-bottom: 0;
+}
+
+.about h1 {
+  font-size: 55px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.about h1 span {
+  color: peru;
+  font-family: mv boli;
+}
+
+.about .about_main {
+  display: flex;
+  left:50px;
+  right:100px;
+  justify-content:space-evenly;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.about .about_main .image img {
+  width: 400px;
+  border-radius: 15px;
+  align-items:center;
+  right:100px;
+}
+
+.about .about_main .about_text {
+  width: 50%;
+  left:100px;
+  right:200px; 
+  
+}
+
+.about .about_main .about_text h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+.about .about_main .about_text p {
+  width: 100%;
+  text-align:center;
+  line-height: 22px;
+  font-size: 20px;
+}
+
+/* Contact Section */
+.contact-container {
+  width: 50%;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  background-color: #6a4c93;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 16px;
+  align-self: center;
+}
+
+button:hover {
+  background-color: #563d7c;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  nav .navbar-right {
+      flex-direction: column;
+  }
+
+  .menu_card {
+      grid-template-columns: 1fr;
+  }
+}
